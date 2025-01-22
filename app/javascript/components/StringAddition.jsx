@@ -9,7 +9,7 @@ const StringAddition = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/calculate_addition', { input });
+      const response = await axios.post('/calculate', { input });
       setResult(response.data.result);
       setError('');
     } catch (err) {
