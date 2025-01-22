@@ -22,7 +22,19 @@ const StringAddition = () => {
     <>
       <div>
         <h1>String Addition</h1>
+        <form onSubmit={handleSubmit}>
+          <textarea
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder='Enter the input'
+          />
+          <button type='submit'>Calculate</button>
+        </form>
+        {result && <div>Result: {result}</div>}
+        {error && <div style={{ color: 'red' }}>Error: {error}</div>}
       </div>
     </>
   )
 }
+
+export default StringAddition;
